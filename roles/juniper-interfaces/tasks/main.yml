@@ -1,0 +1,11 @@
+---
+# tasks file for roles/juniper-interfaces
+
+- name: Load interface configuration file into device
+  junos_config:
+    src: junos-interfaces.j2
+    src_format: text
+    comment: update interface config
+    provider: "{{ junos_netconf }}"
+    backup: False
+    timeout: 60

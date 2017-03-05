@@ -1,2 +1,6 @@
 ---
 hostname: "{{ inventory_hostname }}"
+
+interfaces:
+  - { int_name: xe-0/0/0, ip_address: 10.100.0.3/31}
+  - { int_name: xe-0/0/1, ip_address: 10.100.0.11/31}

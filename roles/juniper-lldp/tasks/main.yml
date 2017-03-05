@@ -1,0 +1,11 @@
+---
+# tasks file for roles/juniper-lldp
+
+- name: Load LLDP configuration file into device
+  junos_config:
+    src: junos-lldp.j2
+    src_format: text
+    comment: update lldp config
+    provider: "{{ junos_netconf }}"
+    backup: False
+    timeout: 60

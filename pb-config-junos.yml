@@ -6,4 +6,6 @@
     - group_vars/vault
   roles:
     # - juniper-netconf
-    - juniper-hostname
+    # - juniper-hostname
+    # - juniper-interfaces
+    - juniper-lldp
