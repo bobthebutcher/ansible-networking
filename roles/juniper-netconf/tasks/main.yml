@@ -1,0 +1,7 @@
+---
+# tasks file for roles/juniper-netconf
+
+- name: Enable netconf service on port 830
+  junos_netconf:
+    state: present
+    provider: "{{ junos_cli }}"

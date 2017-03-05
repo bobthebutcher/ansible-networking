@@ -1,0 +1,16 @@
+[server]
+lab-centos-01
+
+[spine]
+lab-agg-01
+lab-agg-02
+
+[leaf]
+lab-tor-01
+lab-tor-02
+lab-tor-03
+lab-tor-04
+
+[network:children]
+spine
+leaf

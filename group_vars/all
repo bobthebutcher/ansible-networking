@@ -1,0 +1,11 @@
+---
+# Needed when running ansible from a virtual environment
+ansible_python_interpreter: python
+
+junos_user: lab
+
+junos_cli:
+  host: "{{ inventory_hostname }}"
+  username: "{{ junos_user }}"
+  password: "{{ vault_junos_pass }}"
+  transport: cli
