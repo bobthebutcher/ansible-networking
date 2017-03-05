@@ -1,0 +1,11 @@
+---
+# tasks file for roles/juniper-hostname
+
+- name: Load hostname configuration file into device
+  junos_config:
+    src: junos-hostname.j2
+    src_format: text
+    comment: update hostname config
+    provider: "{{ junos_netconf }}"
+    backup: False
+    timeout: 60
