@@ -90,3 +90,6 @@ ENV/
 
 # vault
 group_vars/vault
+
+# pycharm
+.idea
