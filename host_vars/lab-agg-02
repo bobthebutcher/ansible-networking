@@ -17,6 +17,7 @@ interfaces:
   - int_name: xe-0/0/4
     ip_address: 10.100.0.16/31
 
+disabled_interfaces:
 
 ospf:
   - area: 0.0.0.0
