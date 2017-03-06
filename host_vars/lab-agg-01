@@ -2,11 +2,20 @@
 hostname: "{{ inventory_hostname }}"
 
 interfaces:
-  - { int_name: xe-0/0/0, ip_address: 10.100.0.0/31}
-  - { int_name: xe-0/0/1, ip_address: 10.100.0.2/31}
-  - { int_name: xe-0/0/2, ip_address: 10.100.0.4/31}
-  - { int_name: xe-0/0/3, ip_address: 10.100.0.6/31}
-  - { int_name: xe-0/0/4, ip_address: 10.100.0.8/31}
+  - int_name: xe-0/0/0
+    ip_address: 10.100.0.0/31
+
+  - int_name: xe-0/0/1
+    ip_address: 10.100.0.2/31
+
+  - int_name: xe-0/0/2
+    ip_address: 10.100.0.4/31
+
+  - int_name: xe-0/0/3
+    ip_address: 10.100.0.6/31
+
+  - int_name: xe-0/0/4
+    ip_address: 10.100.0.8/31
 
 ospf:
   - area: 0.0.0.0
