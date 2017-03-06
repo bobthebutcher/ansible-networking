@@ -1,8 +1,0 @@
----
-- name: Run commands on Juniper devices
-  hosts: network
-  connection: local
-  vars_files:
-    - group_vars/vault
-  roles:
-    - juniper-command
