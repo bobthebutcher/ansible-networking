@@ -8,6 +8,10 @@ interfaces:
   - int_name: xe-0/0/1
     ip_address: 10.100.0.17/31
 
+disabled_interfaces:
+  - xe-0/0/2
+  - xe-0/0/3
+  - xe-0/0/4
 
 ospf:
   - area: 0.0.0.1

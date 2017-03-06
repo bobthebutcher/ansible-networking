@@ -1,6 +1,7 @@
 interfaces {
 {% for interface in interfaces %}
   {{ interface.int_name }} {
+      {% if interface.disabled %}disable;{% endif %}
       unit 0 {
           family inet {
               address {{ interface.ip_address }};
@@ -8,4 +9,7 @@ interfaces {
     }
   }
 {% endfor %}
+{% for interface in disabled_interfaces %}
+  {{ interface }} {
+      disable;
 }
