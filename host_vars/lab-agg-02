@@ -7,3 +7,15 @@ interfaces:
   - { int_name: xe-0/0/2, ip_address: 10.100.0.12/31}
   - { int_name: xe-0/0/3, ip_address: 10.100.0.14/31}
   - { int_name: xe-0/0/4, ip_address: 10.100.0.16/31}
+
+ospf:
+  - area: 0.0.0.0
+    interfaces:
+      - xe-0/0/0
+
+  - area: 0.0.0.1
+    interfaces:
+      - xe-0/0/1
+      - xe-0/0/2
+      - xe-0/0/3
+      - xe-0/0/4

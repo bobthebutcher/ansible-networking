@@ -4,3 +4,9 @@ hostname: "{{ inventory_hostname }}"
 interfaces:
   - { int_name: xe-0/0/0, ip_address: 10.100.0.9/31}
   - { int_name: xe-0/0/1, ip_address: 10.100.0.17/31}
+
+ospf:
+  - area: 0.0.0.1
+    interfaces:
+      - xe-0/0/0
+      - xe-0/0/1
