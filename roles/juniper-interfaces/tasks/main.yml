@@ -9,3 +9,13 @@
     provider: "{{ junos_netconf }}"
     backup: False
     timeout: 60
+
+- name: Load disable interface configuration file into device
+  junos_config:
+    src: junos-disable-interfaces.j2
+    src_format: text
+    comment: update disable interface config
+    provider: "{{ junos_netconf }}"
+    backup: False
+    timeout: 60
+  when: "{{ disabled_interfaces }}"

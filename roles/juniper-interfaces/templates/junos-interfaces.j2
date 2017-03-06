@@ -8,11 +8,4 @@ interfaces {
     }
   }
 {% endfor %}
-{% if disabled_interfaces %}
-{% for interface in disabled_interfaces %}
-  {{ interface }} {
-      disable;
-  }
-{% endfor %}
-{% endif %}
 }
