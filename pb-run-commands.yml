@@ -1,0 +1,19 @@
+---
+- name: Run commands on Juniper devices
+  hosts: network
+  connection: local
+  vars_files:
+    - group_vars/vault
+
+  tasks:
+  - name: Run arbituary commands on Junos device
+    junos_command:
+      provider: "{{ junos_netconf }}"
+      timeout: 60
+      commands: "{{ item }}"
+      output: text
+    register: result
+    with_items: "{{ command_list }}"
+  
+  - debug: 
+      var: result.results[0].stdout_lines
