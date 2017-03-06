@@ -8,4 +8,5 @@
     # - juniper-netconf
     # - juniper-hostname
     # - juniper-interfaces
-    - juniper-lldp
+    # - juniper-lldp
+    - juniper-ospf

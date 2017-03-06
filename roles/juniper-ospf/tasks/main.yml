@@ -1,0 +1,11 @@
+---
+# tasks file for roles/juniper-ospf
+
+- name: Load OSPF configuration file into device
+  junos_config:
+    src: junos-ospf.j2
+    src_format: text
+    comment: update ospf config
+    provider: "{{ junos_netconf }}"
+    backup: False
+    timeout: 60

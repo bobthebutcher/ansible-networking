@@ -1,0 +1,9 @@
+protocols ospf {
+{% for area in ospf %}
+    area {{ area.area }} {
+    {% for interface in area.interfaces %}
+        interface {{ interface }};
+    {% endfor %}    
+    }
+{% endfor %}
+}
