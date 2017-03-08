@@ -8,7 +8,7 @@ junos_cli:
   host: "{{ inventory_hostname }}"
   username: "{{ junos_user }}"
   password: "{{ vault_junos_pass }}"
-  transport: cli
+  # transport: cli
 
 junos_netconf:
   host: "{{ inventory_hostname }}"
