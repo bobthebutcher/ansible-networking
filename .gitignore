@@ -93,3 +93,5 @@ group_vars/vault
 
 # pycharm
 .idea
+
+.DS_Store
