@@ -8,10 +8,10 @@
   tasks:
   - name: Run arbituary commands on Junos device
     junos_command:
-      provider: "{{ junos_cli }}"
+      provider: "{{ junos_netconf }}"
       timeout: 60
       commands: "{{ item }}"
-      # output: text
+      output: text
     register: result
     with_items: "{{ command_list }}"
   
